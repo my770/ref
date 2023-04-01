@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>BCH Aanaesthesia</title>
+
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0px;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+          background-color: whitesmoke;
+          padding: 20px;
+          text-align: center;
+        }
+
+        a:link {
+            color: black;
+            text-decoration: none;
+                }
+        a:hover {
+            color: blue;
+            text-decoration: underline;
+        }
+                
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 25px;
+        }
+        
+        .row::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        @media screen and (max-width:600px) {
+          .column {
+            width: 100%;
+          }
+        }
+
+        .col {
+            background-color: rgb(136, 193, 195);
+            padding: 25px;
+        }
+
+        /* Style the footer */
+        .footer {
+          background-color:#333;
+          padding: 25px;
+          text-align: center;
+          font: bold;
+        }
+
+        .icon {
+          position: relative;
+          width: 30px;
+          height: auto;
+        }
+
+        .icon2 {
+          color: #f2f2f2;
+          margin: 15px;
+          width: 60px;
+          height: auto;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="header">
+        <h2>BIRMINGHAM CHILDREN'S HOSPITAL</h2>
+        <h4 class="upp">ANAESTHETIC EMERGENCIES GUIDELINES</h4>
+    </div>
+    
+    <div class="card">
+      <div class="card-body">
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Emergency Box Locations
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="anaphylaxisBox.html">Anaphylaxis</a></li>
+            <li><a class="dropdown-item" href="bronchospasmBox.html">Bronchospasm</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="last.html">LAST</a></li>
+            <li><a class="dropdown-item" href="mh.html">Malignant Hyperthermia</a></li>
+          </ul>
+        </div>
+        
+        <a href="drugDose.html" class="btn btn-info" role="button">Emergency Dose Calculator <img src="beta.png" alt="3"> </a>
+        
+
+
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h3> <img class="icon" src="airway.png" alt="0"> Airway</h3>
+            <h5> <a href="02_difficultIntubation.pdf">Difficult Airway Management</a> </h5>
+            <h5> <a href="03_cannotIntubate.pdf">Cannot Intubate and Cannot Ventilate</a> </h5>
+            <h5> <a href="04_tracheostomy.pdf">Emergency Tracheostomy change</a> </h5>
+            <br>
+            <br>
+            <h3> <img class="icon" src="breathing.png" alt="0"> Breathing</h3>
+            <h5> <a href="05_bronchospasm.pdf">Bronchospasm Management</a> </h5>
+        </div>
+        
+        <div class="column">
+            <h3> <img class="icon" src="heart.png" alt="0"> Circulation</h3>
+            <h5> <a href="06_paediatricBLS.pdf">Paediatric Basic Life Support</a> </h5>
+            <h5> <a href="07_paediatricALS.pdf">Paediatric Advanced Life Support</a> </h5>
+            <h5> <a href="08_adultBLS.pdf">Adult Basic Life Support</a> </h5>
+            <h5> <a href="09_adultALS.pdf">Adult Advanced Life Support</a> </h5>
+            <h5> <a href="10_paediatricArrhythmias.pdf">Arrhythmia</a> </h5>
+            <h5> <a href="12_anaphylaxisChildren.pdf">Anaphylaxis</a> </h5>
+            <h5> <a href="14_codeRed.pdf">Code Red</a> </h5>
+        </div>
+        
+        <div class="column">
+            <h3> <img class="icon" src="anaesth.png" alt="0"> Anaesthesia Specific</h3>
+            <h5> <a href="11_last.pdf">Local Anaesthetic Toxicity</a> </h5>
+            <h5> <a href="13_mh.pdf">Malignant Hyperthermia</a> </h5>
+        </div>
+    </div>
+     
+    
+    <div class="row">
+        <div class="col">
+            <h4>Electrolytes</h4>
+            <h6><a href="18_insulinGlucose.pdf">Insulin/Glucose for Hyperkalaemia</a></h6>
+            <h6> <a href="21_ketoacidosis.pdf">Management of Ketoacidosis</a> </h6>
+            <h6> <a href="19_sodiumBicarbonate.pdf">Sodium Bicarbonate Infusion</a> </h6>
+            <h6> <a href="17_hyperkalemia.pdf">Hyperkalaemia Management</a> </h6>
+            <h6> <a href="20_magnesium.pdf">Magnesium Infusion</a> </h6>
+            <h6> <a href="22_calcium.pdf">Calcium Prescription</a> </h6>
+        </div>
+        
+        <div class="col">
+            <h4>Policies</h4>
+            <h6> <a href="dcs.pdf">Damage Control Surgery in Neonates</a> </h6>
+            <h6> <a href="25_increasedICP.pdf">ICP Management</a> </h6>
+            <h6> <a href="15_bloodProductCompatibility.pdf">Blood Product Compatibility</a> </h6>
+            <h6> <a href="16_jwBlood.pdf">Jehovah's Witnesses</a> </h6>
+            <h6> <a href="23_standardsCommonInfusions.pdf">Common Intravenous Infusions used in PICU</a> </h6>
+            <h6> <a href="24_qtProlongingDrugs.pdf">List of drugs to avoid with long QT syndrome patients</a> </h6>
+            <h6> <a href="27_premedication.pdf">Sedation and Premedication Guidelines</a> </h6>
+        </div> 
+
+        <div class="col">
+          
+        </div>
+    </div>
+      
+    <div class="footer">
+      <a href="mailto:mohamed.younis@doctors.org.uk"><img class="icon2" src="mail.png" alt="Contact"></a>
+      <a href="https://github.com/my770"><img class="icon2" src="github.png" alt="Contact"></a>
+    </div>    
+      
+    <div>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        <img class="license" style="border-width:0" 
+        src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License">
+    </a>
+    </div>
+   
+
+</body>
+</html>

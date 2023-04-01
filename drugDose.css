@@ -1,0 +1,95 @@
+
+.collapsible {
+    background-color: #777;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+    background-color: #555;
+    }
+
+    .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    margin: 5px;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    table {
+        border-collapse: collapse;
+        margin: 20px;
+    }
+    
+    th, td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+        column-width: auto;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(odd) td {
+        background-color: #f9f9f9;
+    }
+    
+    tr:hover td {
+        background-color: #eaeaea;
+    }
+    
+    .dose {
+        font-weight: bold;
+    }
+    .section-divider {
+        background-color: #ddd;
+        font-weight: bold;
+    }
+  
+    button  {
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        background-color: dodgerblue;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+    }
+
+    #initial-bolus,
+    #repeat-boluses,
+    #total-dose,
+    #remaining-dose {
+        font-weight: bold;
+        background-color: cyan;
+    }
+
+    #initial-bolus-btn,
+    #repeat-boluses-btn {
+        margin-left: 20px;
+      }
+    
+   

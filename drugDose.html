@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Drug Dosage Calculator</title>
+        <link rel="stylesheet" href="drugDose.css">
+        
+    </head>
+
+    <body>
+        
+        <br>
+        <br>
+        <br>
+        <h2 style="margin: auto; text-align: center;">Weight-based Drug Doses</h2>
+        <br>
+        <br>
+        <br>
+
+       
+        <form style="text-align: center;" onsubmit="calculateDantrolene()" id="weight-form">
+            <label for="weight"><strong>Enter Patient Weight (kg):</strong></label>
+            <input type="number" id="weight" name="weight" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <br>
+        <br>
+        <button style="background-color: rgb(186, 19, 19);" class="collapsible">
+            Paediatric Advanced Life Support</button>
+        <div class="content">
+            <table class="drug-table">
+                <thead>
+                <tr>
+                    <th>Drug</th>
+                    <th>Calcualted Dose</th>
+                    <th>Route</th>
+                    <th>Indication</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Adrenaline (10 &micro;g/kg)</td>
+                    <td><span id="adrenaline"></span></td>
+                    <td>IV/IO, IM, ET</td>
+                    <td>Cardiac arrest, bradycardia with poor perfusion, anaphylaxis (1 &micro;g/kg IV)</td>
+                </tr>
+                <tr>
+                    <td>Amiodarone (5 mg/kg)</td>
+                    <td><span id="amiodarone"></span></td>
+                    <td>IV/IO</td>
+                    <td>Ventricular fibrillation or pulseless ventricular tachycardia 
+                        unresponsive to defibrillation and CPR</td>
+                </tr>
+                <tr>
+                    <td>Defibrillation (4 j/kg)</td>
+                    <td><span id="defibrillation"></span></td>
+                    <td>External pads</td>
+                    <td>Ventricular fibrillation or pulseless ventricular tachycardia</td>
+                </tr>
+                <tr>
+                    <td>Cardioversion (1 j/kg)</td>
+                    <td><span id="cardioversion"></span></td>
+                    <td>External pads</td>
+                    <td>Synchronised Shock, 1.0 joules/kg escalating to 2.0 joules/kg if unsuccessful</td>
+                </tr>
+                <tr>
+                    <td>Atropine  (20 &micro;g/kg)</td>
+                    <td><span id="atropine"></span></td>
+                    <td>IV/IO</td>
+                    <td>Bradycardia (after adequate ventilation and oxygenation), 
+                        pulseless electrical activity (PEA) with suspected vagal tone</td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Adenosine (100 &micro;g/kg)</td>
+                    <td><span id="adenosine"></span></td>
+                    <td>Intravenous</td>
+                    <td>SVT, up to 1 year: 150 &micro;g\kg, increase 50-100 &micro;g\kg
+                        every 1-2 min. Maximum single dose: Neonates 300
+                        &micro;g\kg, Infants 500 &micro;g\kg</td>
+                  </tr>
+                  <tr>
+                    <td>Magnesium (25-50 mg\kg)</td>
+                    <td><span id="magnesium"></span></td>
+                    <td>Intravenous</td>
+                    <td>in Torsades de
+                        pointes VT, maximum per dose 2 g to be given over 10-15 min, may
+                        be repeated once if necessary</td>
+                  </tr>
+                  <tr>
+                    <td>Calcium Gluconate (0.5 ml/kg)</td>
+                    <td><span id="calciumgluconate"></span></td>
+                    <td>Intravenous</td>
+                    <td>Hypocalcaemia, hyperkalaemia (max dose 20 mL); 
+                        IV over 2-5 min if unstable, over 15-20 min if stable</td>
+                  </tr>
+                  <tr>
+                    <td>Fluid bolus (10 ml/kg)</td>
+                    <td><span id="fluid"></span></td>
+                    <td>Intravenous</td>
+                    <td>Balanced isotonic crystalloid or 0.9% Saline</td>
+                  </tr>
+                  <tr>
+                    <td>Gucose (2 ml/kg)</td>
+                    <td><span id="glucose"></span></td>
+                    <td>Intravenous</td>
+                    <td>Glucose 10%</td>
+                  </tr>
+                  <tr>
+                    <td>Sodium bicarbonate (1 mmol/kg)</td>
+                    <td><span id="bicarb"></span></td>
+                    <td>Intravenous</td>
+                    <td>Sodium Bicarbonate 8.4%, for infants under 3-month-old use 4.2% (2 ml/kg)</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <button class="collapsible">Local Anaesthetic Systemic Toxicity</button>
+        <div class="content">
+
+            <table class="drug-table">
+                <thead>
+                <tr>
+                    <th>Drug</th>
+                    <th>Calcualted Dose</th>
+                    <th>Indication</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Adrenaline (1 &micro;g/kg)</td>
+                    <td><span id="adrenalinelast"></span></td>
+                    <td>Treat hypotension with small epinephrine dose (max 1 &micro;/kg)</td>
+                </tr>
+                
+                <tr>
+                    <td>Intralipid 20% bolus (1.5 ml/kg)</td>
+                    <td><span id="lipidbolus"></span></td>
+                    <td>Administer intravenous Intralipid as an initial bolus over a minute</td>
+                </tr>
+                <tr>
+                    <td>Start infusion (0.25 ml/kg/min)</td>
+                    <td><span id="lipidinfusion"></span></td>
+                    <td>Start an infusion of 20% lipid emulsion at 0.25 ml/kg/min</td>
+                </tr>
+                <tr>
+                    <td>Increase infusion to (0.5 ml/kg/min)</td>
+                    <td><span id="lipidinfusionincr"></span></td>
+                    <td>Increase the infusion to 0.5 ml/kg/min if cardiovascular stability is not restored</td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Repeat bolus</td>
+                    <td><span id="lipidbolusrepeat"></span></td>
+                    <td>Repeat bolus every 3-5 min up to 4.5 mL/kg 
+                        total dose until circulation is restored (total of 3 boluses)</td>
+                  </tr>
+                  <tr>
+                    <td>Total dose (10 ml/kg)</td>
+                    <td><span id="lipidmax"></span></td>
+                    <td>The total dose should not exceed 10ml/kg</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button  style="background-color: rgb(239, 228, 20); color: rgb(18, 18, 18);" class="collapsible">Mlignant Hyperthermia</button>
+        <div class="content">
+            <div id="dantrolene">
+
+                <table class="drug-table">
+                    <thead>
+                    <tr>
+                        <th colspan="3">Dantrolene Dose</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Initial Bolus (2.5 mg/kg)</td>
+                        <td><span id="initial-bolus"></span> mg</td>
+                        <td><button id="initial-bolus-btn" onclick="subtractInitialBolus()" disabled>Administer Initial Bolus</button></td>
+                    </tr>
+                    <tr>
+                        <td> Repeat Boluses (1 mg/kg)</td>
+                        <td><span id="repeat-boluses"></span> mg every 5-10 minutes</td>
+                        <td><button id="repeat-boluses-btn" onclick="subtractRepeatBolus()" disabled>Administer Repeat Bolus</button></td>
+                    </tr>
+                    <tr>
+                        <td>Total Dose (10 mg/kg)</td>
+                        <td colspan="2"><span id="total-dose"></span> mg</td>
+                    </tr>
+                    <tr>
+                        <td>Remaining Dose</td>
+                        <td colspan="2"><span id="remaining-dose"></span> mg</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="drugDose.js"></script>
+        
+    </body>
+</html>
